@@ -1,0 +1,142 @@
+/* import google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/* variables */
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+/* Reset and rendering all elements */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: var(--Very-Light-Gray);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin: auto;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+article{
+    text-align: center;
+}
+span{
+    display: block;
+    font-weight: 200;
+}
+article p{
+    width: 54ch;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+p{
+    color: var(--Grayish-Blue);
+    line-height: 1.6;
+}
+h1{
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 15px;
+    font-size: 1.9em;
+}
+div h1{
+    font-size: 16px;
+}
+div p{
+    font-size: 13px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    position: relative;
+}
+.first-card, .third-card{
+    align-self: center;
+    background-color: white;
+    padding: 25px;
+    overflow: hidden;
+    border-top-left-radius: 10px 5px;
+    border-top-right-radius: 10px 5px;
+    box-shadow: 0px 10px 40px -30px;
+}
+.first-card{
+    border-top: 3px solid;
+    border-color: var(--Cyan) white white white;
+    border-right: 0;
+}
+.second-card div{
+    background-color: white;
+    padding: 25px;
+    overflow: hidden;
+    border-top-left-radius: 10px 5px;
+    border-top-right-radius: 10px 5px;
+    box-shadow: 0px 10px 40px -30px;
+}
+.card-1{
+    margin-bottom: 10px;
+    border-top: 3px solid var(--Red);
+    border-radius: 10px;
+}
+.card-2{
+    margin-top: 20px;
+    border-top: 3px solid var(--Orange);
+    border-radius: 10px;
+}
+.third-card{
+    border-top: 3px solid var(--Blue);
+}
+img{
+    float: right;
+    width: 50px;
+    margin-top: 30px;
+}
+.attribution{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    max-width: 240px;
+    text-align: center;
+    font-size: 0.6em;
+    color: var(--Grayish-Blue);
+}
+a{
+    color: var(--Very-Dark-Blue);
+    text-decoration: none;
+}
+@media (max-width:770px) {
+    .cards{
+        grid-template-columns: auto;
+    }
+    h1{
+        font-size: 1.6em;
+    }
+    article p{
+        margin-bottom: 20px;
+        width: auto;
+    }
+    main{
+        margin: 50px auto;
+        width: 80vw;
+    }
+    .attribution{
+        bottom: -25px;
+        top: auto;
+        right: 25%;
+    }
+}
+
+
